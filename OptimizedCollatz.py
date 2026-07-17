@@ -67,13 +67,17 @@ def CollatzChecker(number):
 
 # Example usage
 def find_longest_in_range(start, end):
-    longest_number, longest = 0
+    global longest, longest_number
+    longest_number = 0
+    longest = 0
     for i in range(start, end + 1):
         CollatzChecker(i)
     return longest_number, longest
     
 def find_longest_in_random_array(array):
-    longest_number, longest = 0
+    global longest, longest_number
+    longest_number = 0
+    longest = 0
     for i in array:
         CollatzChecker(i)
     return longest_number, longest
